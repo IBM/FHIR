@@ -1,0 +1,119 @@
+<server description="fhir-server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>transportSecurity-1.0</feature>
+        <feature>appSecurity-2.0</feature>
+        <feature>jaxrs-2.1</feature>
+        <feature>servlet-4.0</feature>
+        <feature>jsonp-1.1</feature>
+        <!-- the db2 jcc driver for 11.5.0.0 doesn't fully implement jdbc-4.2 -->
+        <feature>jdbc-4.1</feature>
+        <feature>websocket-1.1</feature>
+        <feature>localConnector-1.0</feature>
+        <!-- mpJwt-1.2 isn't used by default,
+             but we include it here to avoid NoClassDefFound in our classes that *can* use it -->
+        <feature>mpJwt-1.2</feature>
+    </featureManager>
+
+    <!-- Disable welcome page so that internal server info won't be revealed in responses
+         to requests with an invalid context root.
+    -->
+    <httpDispatcher enableWelcomePage="false"/>
+    <!-- Disable X-Powered-By header to avoid leaking information and
+         override the default error pages to avoid showing stack traces
+         for nonsensical queries like requests for a JSP page that doesn't exist.
+    -->
+    <webContainer disableXPoweredBy="true"
+        displayTextWhenNoErrorPageDefined="Unexpected request/response. Please check the URL and try again."
+        deferServletLoad="false"/>
+
+    <!-- IBM FHIR Server's keystore and truststore configuration -->
+    <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="defaultTrustStore" clientAuthenticationSupported="true" sslProtocol="TLSv1.2"/>
+    <keyStore id="defaultKeyStore" location="${server.config.dir}/resources/security/fhirKeyStore.p12" password="change-password"/>
+    <keyStore id="defaultTrustStore" location="${server.config.dir}/resources/security/fhirTrustStore.p12" password="change-password"/>
+
+    <!-- This entry defines the ports that the server will listen on.
+        By default, the httpPort is disabled (set to "-1").
+        Modify the port #'s as needed to satisfy your config requirements.
+        Note: on Linux, the server must be running with root priviledges in order to
+        listen on ports <= 1024.
+     -->
+    <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="9080" httpsPort="9443" onError="FAIL"/>
+
+    <!--
+        The trace specification can be set via the TRACE_SPEC environment variable (or by overriding it below).
+        
+        Example trace specifications: 
+        <logging traceSpecification="*=info:com.ibm.fhir.*=finer" traceFormat="BASIC"/>
+        <logging traceSpecification="*=info:com.ibm.fhir.persistence.jdbc.dao.impl.*=fine" traceFormat="BASIC"/>
+        <logging traceSpecification="${TRACE_SPEC}" traceFileName="${TRACE_FILE}" traceFormat="${TRACE_FORMAT}" consoleLogLevel="${WLP_LOGGING_CONSOLE_LOGLEVEL}"/>
+        
+        To send the trace messages to standard out, set TRACE_FILE to "stdout".
+    -->
+    <variable name="TRACE_SPEC" defaultValue="*=info"/>
+    <variable name="TRACE_FILE" defaultValue="trace.log"/>
+    <variable name="TRACE_FORMAT" defaultValue="BASIC"/>
+    <variable name="WLP_LOGGING_CONSOLE_LOGLEVEL" defaultValue="INFO"/>
+    <logging traceSpecification="${TRACE_SPEC}" traceFileName="${TRACE_FILE}" traceFormat="${TRACE_FORMAT}" consoleLogLevel="${WLP_LOGGING_CONSOLE_LOGLEVEL}"/>
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <applicationMonitor updateTrigger="mbean"/>
+
+    <!-- This is the main IBM FHIR Server REST API war -->
+    <webApplication id="fhir-server-webapp" contextRoot="fhir-server/api/v4" location="fhir-server.war" name="fhir-server-webapp">
+        <classloader privateLibraryRef="fhirUserLib"/>
+        <!-- Include id attributes to make it easier to override this via dropinConfig -->
+        <application-bnd id="bind">
+            <security-role id="users" name="FHIRUsers">
+                <group id="usersGroup" name="FHIRUsers"/>
+            </security-role>
+        </application-bnd>
+    </webApplication>
+
+    <!--
+        This sharedlib can contain user-contributed jars that are intended to augment
+        the IBM FHIR Server installation (persistence interceptors, persistence layer impl's,
+        custom operation impl's, etc.)
+     -->
+    <library id="fhirUserLib">
+        <fileset dir="${server.config.dir}/userlib" includes="*.jar"/>
+    </library>
+
+    <!-- Shared library definitions for the supported database types -->
+    <library id="sharedLibDb2">
+        <fileset dir="${shared.resource.dir}/lib/db2" includes="*.jar"/>
+    </library>
+    <library id="sharedLibDerby">
+        <fileset dir="${shared.resource.dir}/lib/derby" includes="*.jar"/>
+    </library>
+    <library id="sharedLibPostgres">
+        <fileset dir="${shared.resource.dir}/lib/postgresql" includes="*.jar"/>
+    </library>
+
+    <webAppSecurity allowFailOverToBasicAuth="true" singleSignonEnabled="false"/>
+    
+    <cors domain="/"
+        allowedOrigins="*"
+        allowedMethods="GET, DELETE, POST, PUT, HEAD"
+        allowedHeaders="*"
+        maxAge="3600" />
+
+    <!-- Variables for the users so they can be overriden by environment variables -->
+    <variable name="FHIR_USER_PASSWORD" defaultValue="change-password"/>
+    <variable name="FHIR_ADMIN_PASSWORD" defaultValue="change-password"/>
+
+    <!-- Define a basic user registry with a few users. -->
+    <basicRegistry id="basic" realm="BasicRealm">
+        <user name="fhiruser" password="${FHIR_USER_PASSWORD}"/>
+        <user name="fhiradmin" password="${FHIR_ADMIN_PASSWORD}"/>
+        <group name="FHIRUsers">
+            <member name="fhiruser"/>
+        </group>
+        <group name="clientAdministrator">
+            <member name="fhiruser"/>
+        </group>
+    </basicRegistry>
+</server>

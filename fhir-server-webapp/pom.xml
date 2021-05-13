@@ -82,15 +82,52 @@
             <artifactId>jakarta.servlet-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>${derby.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
+        <finalName>${fhir.server.war.name}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <warName>${fhir.server.war.name}</warName>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.3.4</version>
+                <configuration>
+                    <!-- <verifyTimeout>120</verifyTimeout> -->
+                    <!-- <bootstrapProperties>
+                        <default.http.port>9080</default.http.port>
+                        <default.https.port>9443</default.https.port>
+                    </bootstrapProperties> -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-derby-dependency</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeArtifactIds>derby</includeArtifactIds>
+                            <outputDirectory>${project.build.directory}/liberty/wlp/usr/shared/lib/derby/</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

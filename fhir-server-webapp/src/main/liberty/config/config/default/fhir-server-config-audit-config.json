@@ -1,0 +1,137 @@
+{
+    "__comment": "FHIR Server configuration",
+    "fhirServer": {
+        "core": {
+            "tenantIdHeaderName": "X-FHIR-TENANT-ID",
+            "datastoreIdHeaderName": "X-FHIR-DSID",
+            "checkReferenceTypes": true,
+            "conditionalDeleteMaxNumber": 10,
+            "serverRegistryResourceProviderEnabled": true,
+            "disabledOperations": ""
+        },
+        "security": {
+            "cors": true,
+            "basic": {
+                "enabled": true
+            },
+            "certificates": {
+                "enabled": true
+            },
+            "oauth": {
+                "enabled": false,
+                "regUrl": "https://<host>:9443/oauth2/endpoint/oauth2-provider/registration",
+                "authUrl": "https://<host>:9443/oauth2/endpoint/oauth2-provider/authorize",
+                "tokenUrl": "https://<host>:9443/oauth2/endpoint/oauth2-provider/token",
+                "smart": {
+                    "enabled": false,
+                    "scopes": ["openid", "profile", "fhirUser", "launch/patient", "patient/*.*", "offline_access"],
+                    "capabilities": [
+                        "sso-openid-connect",
+                        "launch-standalone",
+                        "client-public",
+                        "client-confidential-symmetric",
+                        "permission-offline",
+                        "context-standalone-patient",
+                        "permission-patient"
+                    ]
+                }
+            }
+        },
+        "notifications": {
+            "common": {
+                "__comment_includeResourceTypes": [
+                    "QuestionnaireResponse",
+                    "CarePlan",
+                    "MedicationAdministration",
+                    "Device",
+                    "DeviceComponent",
+                    "DeviceMetric",
+                    "MedicationOrder",
+                    "Observation"
+                ]
+            },
+            "websocket": {
+                "__comment": "only enable this for single-tenant, single-server deployments",
+                "enabled": false
+            },
+            "kafka": {
+                "enabled": false,
+                "topicName": "fhirNotifications",
+                "connectionProperties": {
+                    "group.id": "securing-kafka-group",
+                    "bootstrap.servers": "localhost:9093",
+                    "security.protocol": "SSL",
+                    "ssl.truststore.location": "resources/security/kafka.client.truststore.p12",
+                    "ssl.truststore.password": "change-password",
+                    "ssl.keystore.location": "resources/security/kafka.client.keystore.p12",
+                    "ssl.keystore.password": "change-password",
+                    "ssl.key.password": "change-password",
+                    "ssl.truststore.type": "PKCS12",
+                    "ssl.keystore.type": "PKCS12",
+                    "acks": "all",
+                    "retries": "60",
+                    "request.timeout.ms": "10000",
+                    "max.block.ms": "60000",
+                    "max.in.flight.requests.per.connection": "5"
+                }
+            },
+            "nats": {
+                "enabled": false,
+                "cluster": "nats-streaming",
+                "channel": "fhirNotifications",
+                "clientId": "fhir-server",
+                "servers": "nats://nats-node1:4222,nats://nats-node2:4222,nats://nats-node3:4222",
+                "useTLS": false,
+                "truststoreLocation": "resources/security/nats.client.truststore.jks",
+                "truststorePassword": "change-password",
+                "keystoreLocation": "resources/security/nats.client.keystore.jks",
+                "keystorePassword": "change-password"
+            }
+        },
+        "audit": {
+            "serviceClassName" : "com.ibm.fhir.audit.impl.KafkaService",
+            "serviceProperties": {
+                "load": "config",
+                "mapper": "cadf",
+                "auditTopic": "FHIR_AUDIT",
+                "geoCity": "Dallas",
+                "geoState": "TX",
+                "geoCounty": "US",
+                "kafka" : {
+                        "sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"token\" password=\"apiKeyCanGoHere\";",
+                        "bootstrap.servers": "broker-1:9093,broker-2:9093",
+                        "sasl.mechanism": "PLAIN",
+                        "security.protocol": "SASL_SSL",
+                        "ssl.protocol": "TLSv1.2",
+                        "ssl.enabled.protocols": "TLSv1.2",
+                        "ssl.endpoint.identification.algorithm": "HTTPS"
+                },
+                "kafkaServers": "broker-1:9093,broker-2:9093",
+                "kafkaApiKey": "apiKeyCanGoHere"
+            }
+        },
+        "persistence": {
+            "factoryClassname": "com.ibm.fhir.persistence.jdbc.FHIRPersistenceJDBCFactory",
+            "common": {
+                "__comment": "Configuration properties common to all persistence layer implementations",
+                "updateCreateEnabled": true
+            },
+            "jdbc": {
+                "__comment": "Configuration properties for the JDBC persistence implementation",
+                "enableCodeSystemsCache": true,
+                "enableParameterNamesCache": true,
+                "enableResourceTypesCache": true
+            },
+            "datasources": {
+                "default": {
+                    "jndiName": "jdbc/bootstrap_default_default",
+                    "type": "derby",
+                    "currentSchema": "APP"
+                }
+            }
+        },
+        "bulkdata": {
+            "enabled": false
+        }
+    }
+}
