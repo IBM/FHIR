@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+Mon May 17 15:55:08 EDT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0179-7be5-7952-000000489e00 
+on database directory /Users/paulbastide/git/wffh/2021/runtime-ol/liberty-runtime/wlp/usr/servers/fhir-server/derby/study1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2637300e 
+Loaded from file:/Users/paulbastide/git/wffh/2021/FHIR/fhir-persistence-schema/target/fhir-persistence-schema-4.8.0-SNAPSHOT-cli.jar
+java.vendor=AdoptOpenJDK
+java.runtime.version=11.0.8+10
+java.fullversion=11.0.8+10
+JRE 11 Mac OS X amd64-64-Bit Compressed References 20200715_677 (JIT enabled, AOT enabled)
+OpenJ9   - 34cf4c075
+OMR      - 113e54219
+JCL      - 95bb504fbb based on jdk-11.0.8+10
+user.dir=/Users/paulbastide/git/wffh/2021/FHIR
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.16
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

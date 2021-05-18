@@ -1,5 +1,5 @@
 /*
- * (C) Copyright IBM Corp. 2020
+ * (C) Copyright IBM Corp. 2020, 2021
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -44,7 +44,7 @@ import com.ibm.fhir.model.type.Meta;
 import com.ibm.fhir.model.type.Reference;
 
 /**
- * Tests using http://hl7.org/fhir/us/C4BB/2020Feb/Examples.html And the given profile.
+ * Tests using C4BB STU1 And the given profile.
  */
 public class CarinBlueButtonTest extends ProfilesTestBase {
 
@@ -79,7 +79,8 @@ public class CarinBlueButtonTest extends ProfilesTestBase {
             "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|1.0.0",
             "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.0.0",
             "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|1.0.0",
-            "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.0.0");
+            "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.0.0",
+            "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.0.0");
         //@formatter:on
     }
 

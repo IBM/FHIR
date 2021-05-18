@@ -1,5 +1,5 @@
 /*
- * (C) Copyright IBM Corp. 2020
+ * (C) Copyright IBM Corp. 2020, 2021
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -17,9 +17,9 @@ import com.ibm.fhir.ig.carin.bb.BBResourceProvider;
 import com.ibm.fhir.registry.resource.FHIRRegistryResource;
 import com.ibm.fhir.registry.spi.FHIRRegistryResourceProvider;
 
-public class BBResourceProviderTest {
+public class ResourceProviderTest {
     @Test
-    public void testBBResourceProvider() {
+    public void testResourceProvider() {
         FHIRRegistryResourceProvider provider = new BBResourceProvider();
         Collection<FHIRRegistryResource> registryResources = provider.getRegistryResources();
         assertNotNull(registryResources);

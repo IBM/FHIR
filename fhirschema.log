@@ -1,0 +1,346 @@
+2021-05-17 15:55:08.126 00000001    INFO   com.ibm.fhir.schema.app.Main No database specific artifacts
+2021-05-17 15:55:08.162 00000001    INFO .common.JdbcConnectionProvider Opening connection to database: jdbc:derby:/Users/paulbastide/git/wffh/2021/runtime-ol/liberty-runtime/wlp/usr/servers/fhir-server/derby/study1;create=true
+2021-05-17 15:55:08.959 00000001    INFO   com.ibm.fhir.schema.app.Main Collecting model update tasks
+2021-05-17 15:55:09.002 00000001    INFO   com.ibm.fhir.schema.app.Main Starting model updates
+2021-05-17 15:55:09.004 0000001c    INFO ase.utils.model.DatabaseObject Applying change [v1]: TABLESPACE:FHIR_TS:1
+2021-05-17 15:55:09.032 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLESPACE:FHIR_TS:1
+2021-05-17 15:55:09.045 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: SEQUENCE:FHIR_ADMIN.TENANT_SEQUENCE:1
+2021-05-17 15:55:09.046 0000001c WARNING abase.utils.derby.DerbyAdapter [ONCE] Derby does not support CREATE VARIABLE for: SV_TENANT_ID
+2021-05-17 15:55:09.048 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: VARIABLE:FHIR_ADMIN.SV_TENANT_ID:1
+2021-05-17 15:55:09.057 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: SEQUENCE:APP.FHIR_SEQUENCE:1
+2021-05-17 15:55:09.067 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: SEQUENCE:APP.FHIR_REF_SEQUENCE:1
+2021-05-17 15:55:09.076 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: SEQUENCE:APP.REFERENCES_SEQUENCE:1
+2021-05-17 15:55:09.109 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_OAUTH.OAUTH20CACHE:1
+2021-05-17 15:55:09.127 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_OAUTH.OAUTH20CLIENTCONFIG:1
+2021-05-17 15:55:09.143 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_OAUTH.OAUTH20CONSENTCACHE:1
+2021-05-17 15:55:09.164 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.JOBINSTANCE:1
+2021-05-17 15:55:09.185 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_ADMIN.TENANTS:1
+2021-05-17 15:55:09.186 0000001c WARNING abase.utils.derby.DerbyAdapter [ONCE] Derby does not support multi-tenancy on: [CODE_SYSTEMS]
+2021-05-17 15:55:09.198 0000001c WARNING abase.utils.derby.DerbyAdapter [ONCE] Derby does not support CREATE PERMISSION for: CODE_SYSTEMS_TENANT
+2021-05-17 15:55:09.199 0000001c WARNING abase.utils.derby.DerbyAdapter [ONCE] Derby does not support ROW ACCESS CONTROL for table: CODE_SYSTEMS
+2021-05-17 15:55:09.206 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.CODE_SYSTEMS:1
+2021-05-17 15:55:09.223 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.PARAMETER_NAMES:1
+2021-05-17 15:55:09.244 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.RESOURCE_TYPES:1
+2021-05-17 15:55:09.264 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.RESOURCE_CHANGE_LOG:9
+2021-05-17 15:55:09.271 0000001c    INFO abase.utils.derby.DerbyAdapter Recreating sequence 'APP.FHIR_REF_SEQUENCE' START WITH 20000
+2021-05-17 15:55:09.281 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: SEQUENCE:APP.FHIR_REF_SEQUENCE:3
+2021-05-17 15:55:09.324 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.JOBEXECUTION:1
+2021-05-17 15:55:09.348 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.GROUPASSOCIATION:1
+2021-05-17 15:55:09.384 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_ADMIN.TENANT_KEYS:1
+2021-05-17 15:55:09.412 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.COMMON_TOKEN_VALUES:6
+2021-05-17 15:55:09.449 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.LOGICAL_RESOURCES:9
+2021-05-17 15:55:09.473 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.JOBPARAMETER:1
+2021-05-17 15:55:09.527 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.STEPTHREADEXECUTION:1
+2021-05-17 15:55:09.528 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: NOP:FHIR_ADMIN.allAdminTablesComplete:0
+2021-05-17 15:55:09.593 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.STR_VALUES:1
+2021-05-17 15:55:09.629 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.LOGICAL_RESOURCE_COMPARTMENTS:6
+2021-05-17 15:55:09.671 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.DATE_VALUES:2
+2021-05-17 15:55:09.719 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:APP.RESOURCE_TOKEN_REFS:9
+2021-05-17 15:55:09.767 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.STEPTHREADINSTANCE:1
+2021-05-17 15:55:09.799 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: TABLE:FHIR_JBATCH.REMOTABLEPARTITION:1
+2021-05-17 15:55:09.800 0000001c WARNING abase.utils.derby.DerbyAdapter [ONCE] Drop procedure not supported in Derby
+2021-05-17 15:55:09.801 0000001c WARNING abase.utils.derby.DerbyAdapter [ONCE] Create procedure not supported in Derby
+2021-05-17 15:55:09.803 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: PROCEDURE:FHIR_ADMIN.SET_TENANT:2
+2021-05-17 15:55:10.107 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCEREFERENCEINFORMATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:10.372 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CHARGEITEM_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:10.647 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ENROLLMENTREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:10.902 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.BINARY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:11.147 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CONCEPTMAP_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:11.432 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CLINICALIMPRESSION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:11.726 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PATIENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:12.003 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PAYMENTRECONCILIATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:12.277 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RISKEVIDENCESYNTHESIS_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:12.529 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RESEARCHSTUDY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:12.804 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.QUESTIONNAIRERESPONSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:13.058 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SPECIMENDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:13.308 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTPHARMACEUTICAL_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:13.546 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICATIONKNOWLEDGE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:13.824 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.LOCATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:14.044 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.OPERATIONDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:14.324 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTINTERACTION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:14.567 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:14.795 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.TESTSCRIPT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:15.015 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCEPOLYMER_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:15.234 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COMPOSITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:15.465 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:15.738 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ENCOUNTER_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:15.991 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.QUESTIONNAIRE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:16.208 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CONDITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:16.418 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PERSON_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:16.640 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DOCUMENTMANIFEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:16.863 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.OBSERVATIONDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:17.069 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MESSAGEHEADER_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:17.274 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SLOT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:17.480 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUPPLYREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:17.676 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.LIBRARY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:17.887 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.OBSERVATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:18.075 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.BASIC_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:18.269 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDIA_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:18.475 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CONTRACT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:18.671 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.IMMUNIZATIONRECOMMENDATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:18.923 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SPECIMEN_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:19.121 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PARAMETERS_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:19.324 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PROCEDURE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:19.522 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DEVICEDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:19.717 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTPACKAGED_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:19.918 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTAUTHORIZATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:20.113 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COMMUNICATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:20.305 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.TESTREPORT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:20.514 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CLAIM_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:20.727 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COVERAGEELIGIBILITYREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:20.925 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.VALUESET_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:21.212 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PLANDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:21.537 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ALLERGYINTOLERANCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:21.781 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RESEARCHELEMENTDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:21.985 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RESOURCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:22.172 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.IMMUNIZATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:22.364 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EXAMPLESCENARIO_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:22.554 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DEVICE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:22.744 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.IMAGINGSTUDY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:22.968 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RESEARCHSUBJECT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:23.207 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.IMPLEMENTATIONGUIDE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:23.419 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.GOAL_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:23.640 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PRACTITIONER_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:23.846 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEASURE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:24.031 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEASUREREPORT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:24.221 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DEVICEUSESTATEMENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:24.406 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.APPOINTMENTRESPONSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:24.603 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.GRAPHDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:24.788 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SCHEDULE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:24.978 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EPISODEOFCARE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:25.194 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.TASK_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:25.418 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PAYMENTNOTICE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:25.602 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.BODYSTRUCTURE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:25.777 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.INSURANCEPLAN_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:25.960 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EFFECTEVIDENCESYNTHESIS_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:26.149 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:26.354 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUPPLYDELIVERY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:26.519 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EVENTDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:26.694 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.VERIFICATIONRESULT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:26.872 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DOCUMENTREFERENCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:27.063 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.NUTRITIONORDER_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:27.265 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCESOURCEMATERIAL_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:27.558 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COMPARTMENTDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:27.729 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.FAMILYMEMBERHISTORY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:27.910 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.LINKAGE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:28.083 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.LIST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:28.263 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COVERAGE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:28.441 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ORGANIZATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:28.618 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RESEARCHDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:28.808 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CAREPLAN_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:28.973 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.STRUCTUREMAP_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:29.134 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.VISIONPRESCRIPTION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:29.304 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.GUIDANCERESPONSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:29.472 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MESSAGEDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:29.639 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ENROLLMENTRESPONSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:29.811 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.BIOLOGICALLYDERIVEDPRODUCT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:29.978 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CONSENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:30.176 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICATIONADMINISTRATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:30.338 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CLAIMRESPONSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:30.523 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.TERMINOLOGYCAPABILITIES_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:30.713 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PROVENANCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:30.902 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTUNDESIRABLEEFFECT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:31.074 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.APPOINTMENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:31.244 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MOLECULARSEQUENCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:31.430 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICATIONREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:31.588 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.PRACTITIONERROLE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:31.753 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DEVICEREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:31.947 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DEVICEMETRIC_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:32.294 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCEPROTEIN_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:32.658 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCENUCLEICACID_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:32.964 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.REQUESTGROUP_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:33.271 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.AUDITEVENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:33.580 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DETECTEDISSUE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:33.813 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COMMUNICATIONREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:34.076 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.STRUCTUREDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:34.332 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EXPLANATIONOFBENEFIT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:34.569 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.HEALTHCARESERVICE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:34.816 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CODESYSTEM_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:35.105 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.BUNDLE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:35.349 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CHARGEITEMDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:35.572 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.FLAG_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:35.970 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ORGANIZATIONAFFILIATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:36.223 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EVIDENCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:36.477 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICATIONSTATEMENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:36.717 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSTANCESPECIFICATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:37.008 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.GROUP_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:37.268 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ACCOUNT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:37.521 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ADVERSEEVENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:37.674 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTCONTRAINDICATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:37.824 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTINDICATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:37.966 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.EVIDENCEVARIABLE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:38.109 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.INVOICE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:38.282 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CATALOGENTRY_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:38.479 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTINGREDIENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:38.657 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RISKASSESSMENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:38.804 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DIAGNOSTICREPORT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:38.966 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.OPERATIONOUTCOME_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:39.118 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICINALPRODUCTMANUFACTURED_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:39.290 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.RELATEDPERSON_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:39.449 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CAPABILITYSTATEMENT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:39.589 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.MEDICATIONDISPENSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:39.756 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.COVERAGEELIGIBILITYRESPONSE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:39.907 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.IMMUNIZATIONEVALUATION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.065 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.CARETEAM_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.207 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.NAMINGSYSTEM_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.333 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ACTIVITYDEFINITION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.471 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.DOMAINRESOURCE_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.619 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SERVICEREQUEST_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.768 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.ENDPOINT_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:40.941 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SUBSCRIPTION_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:41.112 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: GROUP:APP.SEARCHPARAMETER_RESOURCE_TABLE_GROUP:0
+2021-05-17 15:55:41.112 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: NOP:FHIR_ADMIN.adminSchemaComplete:0
+2021-05-17 15:55:41.112 0000001c    INFO hir.task.core.impl.TaskManager Task complete callback for taskId: NOP:APP.allTablesComplete:0
+2021-05-17 15:55:41.113 00000001    INFO   com.ibm.fhir.schema.app.Main tenantId [default] is being pre-populated with lookup table data.
+2021-05-17 15:55:41.163 00000001    INFO   com.ibm.fhir.schema.app.Main Finished prepopulating the resource type and search parameter code/name tables tables
+2021-05-17 15:55:41.164 00000001    INFO   com.ibm.fhir.schema.app.Main Refreshing procedures and functions
+2021-05-17 15:55:41.170 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Appointment resources for schema 'APP'
+2021-05-17 15:55:41.193 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Account resources for schema 'APP'
+2021-05-17 15:55:41.201 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DomainResource resources for schema 'APP'
+2021-05-17 15:55:41.210 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Invoice resources for schema 'APP'
+2021-05-17 15:55:41.218 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CatalogEntry resources for schema 'APP'
+2021-05-17 15:55:41.226 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with EventDefinition resources for schema 'APP'
+2021-05-17 15:55:41.235 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DocumentManifest resources for schema 'APP'
+2021-05-17 15:55:41.244 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MessageDefinition resources for schema 'APP'
+2021-05-17 15:55:41.253 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Goal resources for schema 'APP'
+2021-05-17 15:55:41.261 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductPackaged resources for schema 'APP'
+2021-05-17 15:55:41.271 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Endpoint resources for schema 'APP'
+2021-05-17 15:55:41.279 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with EnrollmentRequest resources for schema 'APP'
+2021-05-17 15:55:41.289 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Consent resources for schema 'APP'
+2021-05-17 15:55:41.298 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CapabilityStatement resources for schema 'APP'
+2021-05-17 15:55:41.308 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Measure resources for schema 'APP'
+2021-05-17 15:55:41.316 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Medication resources for schema 'APP'
+2021-05-17 15:55:41.324 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ResearchSubject resources for schema 'APP'
+2021-05-17 15:55:41.333 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Subscription resources for schema 'APP'
+2021-05-17 15:55:41.341 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DocumentReference resources for schema 'APP'
+2021-05-17 15:55:41.351 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with GraphDefinition resources for schema 'APP'
+2021-05-17 15:55:41.360 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Parameters resources for schema 'APP'
+2021-05-17 15:55:41.370 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CoverageEligibilityResponse resources for schema 'APP'
+2021-05-17 15:55:41.378 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MeasureReport resources for schema 'APP'
+2021-05-17 15:55:41.388 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with PractitionerRole resources for schema 'APP'
+2021-05-17 15:55:41.398 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SubstanceReferenceInformation resources for schema 'APP'
+2021-05-17 15:55:41.407 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with RelatedPerson resources for schema 'APP'
+2021-05-17 15:55:41.421 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ServiceRequest resources for schema 'APP'
+2021-05-17 15:55:41.430 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SupplyRequest resources for schema 'APP'
+2021-05-17 15:55:41.444 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Practitioner resources for schema 'APP'
+2021-05-17 15:55:41.454 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with VerificationResult resources for schema 'APP'
+2021-05-17 15:55:41.461 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SubstanceProtein resources for schema 'APP'
+2021-05-17 15:55:41.469 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with BodyStructure resources for schema 'APP'
+2021-05-17 15:55:41.477 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Slot resources for schema 'APP'
+2021-05-17 15:55:41.487 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Contract resources for schema 'APP'
+2021-05-17 15:55:41.497 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Person resources for schema 'APP'
+2021-05-17 15:55:41.507 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with RiskAssessment resources for schema 'APP'
+2021-05-17 15:55:41.517 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Group resources for schema 'APP'
+2021-05-17 15:55:41.525 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with PaymentNotice resources for schema 'APP'
+2021-05-17 15:55:41.534 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ResearchDefinition resources for schema 'APP'
+2021-05-17 15:55:41.543 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductManufactured resources for schema 'APP'
+2021-05-17 15:55:41.554 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Organization resources for schema 'APP'
+2021-05-17 15:55:41.561 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CareTeam resources for schema 'APP'
+2021-05-17 15:55:41.569 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ImplementationGuide resources for schema 'APP'
+2021-05-17 15:55:41.577 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ImagingStudy resources for schema 'APP'
+2021-05-17 15:55:41.585 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with FamilyMemberHistory resources for schema 'APP'
+2021-05-17 15:55:41.595 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ChargeItem resources for schema 'APP'
+2021-05-17 15:55:41.605 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ResearchElementDefinition resources for schema 'APP'
+2021-05-17 15:55:41.614 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ObservationDefinition resources for schema 'APP'
+2021-05-17 15:55:41.622 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Encounter resources for schema 'APP'
+2021-05-17 15:55:41.630 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Substance resources for schema 'APP'
+2021-05-17 15:55:41.639 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SubstanceSpecification resources for schema 'APP'
+2021-05-17 15:55:41.650 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SearchParameter resources for schema 'APP'
+2021-05-17 15:55:41.658 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ActivityDefinition resources for schema 'APP'
+2021-05-17 15:55:41.665 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Communication resources for schema 'APP'
+2021-05-17 15:55:41.673 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with InsurancePlan resources for schema 'APP'
+2021-05-17 15:55:41.683 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Linkage resources for schema 'APP'
+2021-05-17 15:55:41.692 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SubstanceSourceMaterial resources for schema 'APP'
+2021-05-17 15:55:41.700 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ImmunizationEvaluation resources for schema 'APP'
+2021-05-17 15:55:41.709 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DeviceUseStatement resources for schema 'APP'
+2021-05-17 15:55:41.717 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with RequestGroup resources for schema 'APP'
+2021-05-17 15:55:41.725 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DeviceRequest resources for schema 'APP'
+2021-05-17 15:55:41.738 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MessageHeader resources for schema 'APP'
+2021-05-17 15:55:41.748 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ImmunizationRecommendation resources for schema 'APP'
+2021-05-17 15:55:41.757 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Provenance resources for schema 'APP'
+2021-05-17 15:55:41.765 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Task resources for schema 'APP'
+2021-05-17 15:55:41.774 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Questionnaire resources for schema 'APP'
+2021-05-17 15:55:41.783 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ExplanationOfBenefit resources for schema 'APP'
+2021-05-17 15:55:41.790 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductPharmaceutical resources for schema 'APP'
+2021-05-17 15:55:41.799 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ResearchStudy resources for schema 'APP'
+2021-05-17 15:55:41.808 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Specimen resources for schema 'APP'
+2021-05-17 15:55:41.816 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with AllergyIntolerance resources for schema 'APP'
+2021-05-17 15:55:41.824 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CarePlan resources for schema 'APP'
+2021-05-17 15:55:41.833 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with StructureDefinition resources for schema 'APP'
+2021-05-17 15:55:41.840 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ChargeItemDefinition resources for schema 'APP'
+2021-05-17 15:55:41.848 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with EpisodeOfCare resources for schema 'APP'
+2021-05-17 15:55:41.863 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with OperationOutcome resources for schema 'APP'
+2021-05-17 15:55:41.873 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Procedure resources for schema 'APP'
+2021-05-17 15:55:41.882 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with List resources for schema 'APP'
+2021-05-17 15:55:41.892 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ConceptMap resources for schema 'APP'
+2021-05-17 15:55:41.903 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with OperationDefinition resources for schema 'APP'
+2021-05-17 15:55:41.911 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ValueSet resources for schema 'APP'
+2021-05-17 15:55:41.920 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Immunization resources for schema 'APP'
+2021-05-17 15:55:41.929 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicationRequest resources for schema 'APP'
+2021-05-17 15:55:41.938 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with EffectEvidenceSynthesis resources for schema 'APP'
+2021-05-17 15:55:41.947 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with BiologicallyDerivedProduct resources for schema 'APP'
+2021-05-17 15:55:41.956 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Device resources for schema 'APP'
+2021-05-17 15:55:41.964 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with VisionPrescription resources for schema 'APP'
+2021-05-17 15:55:41.972 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Media resources for schema 'APP'
+2021-05-17 15:55:41.982 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductContraindication resources for schema 'APP'
+2021-05-17 15:55:41.990 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Resource resources for schema 'APP'
+2021-05-17 15:55:41.999 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with EvidenceVariable resources for schema 'APP'
+2021-05-17 15:55:42.007 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MolecularSequence resources for schema 'APP'
+2021-05-17 15:55:42.015 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProduct resources for schema 'APP'
+2021-05-17 15:55:42.027 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DeviceMetric resources for schema 'APP'
+2021-05-17 15:55:42.034 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CodeSystem resources for schema 'APP'
+2021-05-17 15:55:42.043 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Flag resources for schema 'APP'
+2021-05-17 15:55:42.052 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SubstanceNucleicAcid resources for schema 'APP'
+2021-05-17 15:55:42.060 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with RiskEvidenceSynthesis resources for schema 'APP'
+2021-05-17 15:55:42.069 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with AppointmentResponse resources for schema 'APP'
+2021-05-17 15:55:42.077 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with StructureMap resources for schema 'APP'
+2021-05-17 15:55:42.085 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with AdverseEvent resources for schema 'APP'
+2021-05-17 15:55:42.093 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with GuidanceResponse resources for schema 'APP'
+2021-05-17 15:55:42.100 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Observation resources for schema 'APP'
+2021-05-17 15:55:42.109 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicationAdministration resources for schema 'APP'
+2021-05-17 15:55:42.117 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with EnrollmentResponse resources for schema 'APP'
+2021-05-17 15:55:42.124 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Binary resources for schema 'APP'
+2021-05-17 15:55:42.132 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Library resources for schema 'APP'
+2021-05-17 15:55:42.140 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductInteraction resources for schema 'APP'
+2021-05-17 15:55:42.152 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicationStatement resources for schema 'APP'
+2021-05-17 15:55:42.160 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CommunicationRequest resources for schema 'APP'
+2021-05-17 15:55:42.174 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with TestScript resources for schema 'APP'
+2021-05-17 15:55:42.182 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Basic resources for schema 'APP'
+2021-05-17 15:55:42.191 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SubstancePolymer resources for schema 'APP'
+2021-05-17 15:55:42.199 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with TestReport resources for schema 'APP'
+2021-05-17 15:55:42.205 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ClaimResponse resources for schema 'APP'
+2021-05-17 15:55:42.213 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicationDispense resources for schema 'APP'
+2021-05-17 15:55:42.221 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DiagnosticReport resources for schema 'APP'
+2021-05-17 15:55:42.229 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with OrganizationAffiliation resources for schema 'APP'
+2021-05-17 15:55:42.237 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with HealthcareService resources for schema 'APP'
+2021-05-17 15:55:42.245 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductIndication resources for schema 'APP'
+2021-05-17 15:55:42.253 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with NutritionOrder resources for schema 'APP'
+2021-05-17 15:55:42.261 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with TerminologyCapabilities resources for schema 'APP'
+2021-05-17 15:55:42.268 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Evidence resources for schema 'APP'
+2021-05-17 15:55:42.275 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with AuditEvent resources for schema 'APP'
+2021-05-17 15:55:42.283 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with PaymentReconciliation resources for schema 'APP'
+2021-05-17 15:55:42.293 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Condition resources for schema 'APP'
+2021-05-17 15:55:42.306 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SpecimenDefinition resources for schema 'APP'
+2021-05-17 15:55:42.321 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Composition resources for schema 'APP'
+2021-05-17 15:55:42.329 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DetectedIssue resources for schema 'APP'
+2021-05-17 15:55:42.345 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Bundle resources for schema 'APP'
+2021-05-17 15:55:42.352 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CompartmentDefinition resources for schema 'APP'
+2021-05-17 15:55:42.362 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicationKnowledge resources for schema 'APP'
+2021-05-17 15:55:42.373 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductIngredient resources for schema 'APP'
+2021-05-17 15:55:42.401 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Patient resources for schema 'APP'
+2021-05-17 15:55:42.413 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Coverage resources for schema 'APP'
+2021-05-17 15:55:42.445 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with QuestionnaireResponse resources for schema 'APP'
+2021-05-17 15:55:42.452 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with CoverageEligibilityRequest resources for schema 'APP'
+2021-05-17 15:55:42.459 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with NamingSystem resources for schema 'APP'
+2021-05-17 15:55:42.467 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductUndesirableEffect resources for schema 'APP'
+2021-05-17 15:55:42.474 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ExampleScenario resources for schema 'APP'
+2021-05-17 15:55:42.481 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Schedule resources for schema 'APP'
+2021-05-17 15:55:42.489 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with SupplyDelivery resources for schema 'APP'
+2021-05-17 15:55:42.508 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with ClinicalImpression resources for schema 'APP'
+2021-05-17 15:55:42.515 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with DeviceDefinition resources for schema 'APP'
+2021-05-17 15:55:42.525 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with PlanDefinition resources for schema 'APP'
+2021-05-17 15:55:42.534 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with MedicinalProductAuthorization resources for schema 'APP'
+2021-05-17 15:55:42.542 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Claim resources for schema 'APP'
+2021-05-17 15:55:42.548 00000001    INFO   com.ibm.fhir.schema.app.Main Backfilling RESOURCE_CHANGE_LOG with Location resources for schema 'APP'
+2021-05-17 15:55:42.982 00000001    INFO   com.ibm.fhir.schema.app.Main Processing took:  36.145 s
+2021-05-17 15:55:42.983 00000001    INFO   com.ibm.fhir.schema.app.Main SCHEMA CHANGE: OK

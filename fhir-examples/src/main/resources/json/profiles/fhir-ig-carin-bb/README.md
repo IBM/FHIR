@@ -1,8 +1,9 @@
-These examples are for Consumer-Directed Payer Data Exchange - Release 1.0.0. 
+These examples are for Consumer-Directed Payer Data Exchange - 1.0.0 - CI - STU1 Update - Peer Review
 
-Retrieved 30 NOV 2020
+Retrieved 2021-MAY-17
 
 ## Changes
 
-- Removed `ExplanationOfBenefit.adjudication` from ExplanationOfBenefit-InpatientEOBExample1.json and ExplanationOfBenefit-OutpatientEOBExample1.json
-to comply with constraint `EOB-institutional-item-or-header-adjudication`.
+- Changed OrganizationProvider1/OrganizationPayer1/Coverage-Coverage1/Patient-Patient1/EOBInpatient1
+ so the constraint passes and is valid - JIRA https://jira.hl7.org/browse/FHIR-32428
+- Clean up generated narrative in Patient-ExamplePatient1.json

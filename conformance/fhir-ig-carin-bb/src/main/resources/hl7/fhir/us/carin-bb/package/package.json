@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "tools-version": 3,
   "type": "fhir.ig",
-  "date": "20201123164834",
+  "date": "20210423054044",
   "license": "CC0-1.0",
   "canonical": "http://hl7.org/fhir/us/carin-bb",
   "notForPublication": true,
   "url": "https://build.fhir.org/ig/HL7/carin-bb/",
   "title": "CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)",
-  "description": "CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) (built Mon, Nov 23, 2020 16:48+0000+00:00)",
+  "description": "CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) (built Fri, Apr 23, 2021 05:40+0000+00:00)",
   "fhirVersions": [
     "4.0.1"
   ],

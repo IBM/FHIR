@@ -4,11 +4,11 @@
 	"meta": {
 		"lastUpdated": "2020-04-28T15:39:36-04:00",
 		"source": "Organization/PayerOrganizationExample1",
-		"profile": ["http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional"]
+		"profile": ["http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.0.0"]
 	},
 	"text": {
 		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber: InpatientEOBExample1</p><p><b>status</b>: active</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/claim-type institutional}\">Institutional</span></p><p><b>use</b>: claim</p><p><b>patient</b>: <a href=\"Patient-ExamplePatient1.html\">Generated Summary: language: en-US; An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier.: 88800933501; active; Member 01 Test ; Phone: 5555555551, Phone: 5555555552, Phone: 5555555553, Phone: 5555555554, Phone: 5555555555, Phone: 5555555556, GXXX@XXXX.com, Fax: 5555555557; gender: male; birthDate: 1943-01-01; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-NullFlavor UNK}\">unknown</span></a></p><p><b>billablePeriod</b>: 2017-05-23 --&gt; 2017-05-23</p><p><b>created</b>: Jun 1, 2017, 4:00:00 AM</p><p><b>insurer</b>: <a href=\"Organization-PayerOrganizationExample1.html\">UPMC Health Plan. Generated Summary: NAIC Code: 95216; active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span>; name: UPMC Health Plan; Phone: 1-844-220-4785 TTY: 711, Phone: 1-866-406-8762</a></p><p><b>provider</b>: <a href=\"Organization-ProviderOrganization3.html\">Generated Summary: National Provider Identifier: 3334445550; active; name: Green Medical Group</a></p><h3>Payees</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Party</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/payeetype provider}\">Any benefit payable will be paid to the provider (Assignment of Benefit).</span></td><td><a href=\"Organization-ProviderOrganization4.html\">Generated Summary: National Provider Identifier: 4445556660; active; name: Blue Medical Group</a></td></tr></table><p><b>outcome</b>: complete</p><blockquote><p><b>careTeam</b></p><p><b>sequence</b>: 1</p><p><b>provider</b>: <a href=\"Practitioner-Practitioner2.html\">Generated Summary: National Provider Identifier: 8889990000; active; Jack Brown </a></p><p><b>role</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole attending}\">The attending physician</span></p></blockquote><blockquote><p><b>careTeam</b></p><p><b>sequence</b>: 2</p><p><b>provider</b>: <a href=\"Practitioner-Practitioner2.html\">Generated Summary: National Provider Identifier: 8889990000; active; Jack Brown </a></p><p><b>role</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole referring}\">The referring physician</span></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>: 1</p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType billingnetworkcontractingstatus}\">Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission.</span></p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus contracted}\">Indicates the provider was contracted for the service</span></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>: 2</p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType clmrecvddate}\">Date the claim was received by the payer.</span></p><p><b>timing</b>: 2017-06-01</p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>: 3</p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType admissionperiod}\">Dates corresponding with the admission and discharge of the beneficiary to a facility</span></p><p><b>timing</b>: 2017-05-23 --&gt; (ongoing)</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 1</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm I21.4}\">I21.4</span></p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/ex-diagnosistype principal}\">The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.</span></p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 2</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm I25.118}\">I25.118</span></p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType other}\">Required when other conditions coexist or develop subsequently during the treatment</span></p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 3</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm E78.5}\">E78.5</span></p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType other}\">Required when other conditions coexist or develop subsequently during the treatment</span></p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 4</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm M19.90}\">M19.90</span></p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType other}\">Required when other conditions coexist or develop subsequently during the treatment</span></p></blockquote><blockquote><p><b>procedure</b></p><p><b>sequence</b>: 1</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType principal}\">The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis</span></p><p><b>date</b>: 2017-05-23</p><p><b>procedure</b>: <span title=\"Codes: {http://www.cms.gov/Medicare/Coding/ICD10 4A023N7}\">4A023N7</span></p></blockquote><blockquote><p><b>procedure</b></p><p><b>sequence</b>: 2</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType other}\">Other procedures performed during the inpatient institutional admission</span></p><p><b>date</b>: 2017-05-23</p><p><b>procedure</b>: <span title=\"Codes: {http://www.cms.gov/Medicare/Coding/ICD10 B211YZZ}\">B211YZZ</span></p></blockquote><blockquote><p><b>procedure</b></p><p><b>sequence</b>: 3</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType other}\">Other procedures performed during the inpatient institutional admission</span></p><p><b>date</b>: 2017-05-23</p><p><b>procedure</b>: <span title=\"Codes: {http://www.cms.gov/Medicare/Coding/ICD10 B215YZZ}\">B215YZZ</span></p></blockquote><h3>Insurances</h3><table class=\"grid\"><tr><td>-</td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>true</td><td><a href=\"Coverage-CoverageEx2.html\">Generated Summary: language: en-US; An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier.: 88800933501; status: active; subscriberId: 888009335; dependent: 01; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/subscriber-relationship self}\">Self</span>; period: 2017-01-01 --&gt; 2017-06-30; network: GI8-HMO DEDUCTIBLE</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0301}\">0301</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 2</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0260}\">0260</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 3</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0305}\">0305</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 4</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0324}\">0324</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 5</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0259}\">0259</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 6</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0250}\">0250</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 7</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0710}\">0710</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 8</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0210}\">0210</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 9</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0272}\">0272</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 10</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0370}\">0370</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 11</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0730}\">0730</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 12</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0450}\">0450</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 13</p><p><b>revenue</b>: <span title=\"Codes: {http://www.nubc.org/RevenueCodes 0481}\">0481</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication memberliability}\">The amount of the member's liability.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber: InpatientEOBExample1</p><p><b>status</b>: active</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/claim-type institutional}\">Institutional</span></p><p><b>subType</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType inpatient}\">Inpatient</span></p><p><b>use</b>: claim</p><p><b>patient</b>: <a href=\"Patient-ExamplePatient1.html\">Generated Summary: language: en-US; An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier.: 88800933501; active; Member 01 Test ; Phone: 5555555551, Phone: 5555555552, Phone: 5555555553, Phone: 5555555554, Phone: 5555555555, Phone: 5555555556, GXXX@XXXX.com, Fax: 5555555557; gender: male; birthDate: 1943-01-01; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-NullFlavor UNK}\">unknown</span></a></p><p><b>billablePeriod</b>: 2017-05-23 --&gt; 2017-05-23</p><p><b>created</b>: Jun 1, 2017, 4:00:00 AM</p><p><b>insurer</b>: <a href=\"Organization-PayerOrganizationExample1.html\">UPMC Health Plan. Generated Summary: NAIC Code: 95216; active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span>; name: UPMC Health Plan; Phone: 1-844-220-4785 TTY: 711, Phone: 1-866-406-8762</a></p><p><b>provider</b>: <a href=\"Organization-ProviderOrganization3.html\">Generated Summary: National Provider Identifier: 3334445550; active; name: Green Medical Group</a></p><h3>Payees</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Party</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/payeetype provider}\">Any benefit payable will be paid to the provider (Assignment of Benefit).</span></td><td><a href=\"Organization-ProviderOrganization4.html\">Generated Summary: National Provider Identifier: 4445556660; active; name: Blue Medical Group</a></td></tr></table><p><b>outcome</b>: complete</p><blockquote><p><b>careTeam</b></p><p><b>sequence</b>: 1</p><p><b>provider</b>: <a href=\"Practitioner-Practitioner2.html\">Generated Summary: National Provider Identifier: 8889990000; active; Jack Brown </a></p><p><b>role</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole attending}\">The attending physician</span></p></blockquote><blockquote><p><b>careTeam</b></p><p><b>sequence</b>: 2</p><p><b>provider</b>: <a href=\"Practitioner-Practitioner2.html\">Generated Summary: National Provider Identifier: 8889990000; active; Jack Brown </a></p><p><b>role</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole referring}\">The referring physician</span></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>: 1</p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType billingnetworkcontractingstatus}\">Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission.</span></p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus contracted}\">Indicates the provider was contracted for the service</span></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>: 2</p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType clmrecvddate}\">Date the claim was received by the payer.</span></p><p><b>timing</b>: 2017-06-01</p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>: 3</p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType admissionperiod}\">Dates corresponding with the admission and discharge of the beneficiary to a facility</span></p><p><b>timing</b>: 2017-05-23 --&gt; (ongoing)</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 1</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm I21.4}\">Non-ST elevation (NSTEMI) myocardial infarction</span></p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/ex-diagnosistype principal}\">The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.</span></p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 2</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm I25.118}\">Atherosclerotic heart disease of native coronary artery with other forms of angina pectoris</span></p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType other}\">Required when other conditions coexist or develop subsequently during the treatment</span></p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 3</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm E78.5}\">Hyperlipidemia, unspecified</span></p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType other}\">Required when other conditions coexist or develop subsequently during the treatment</span></p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>sequence</b>: 4</p><p><b>diagnosis</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm M19.90}\">Unspecified osteoarthritis, unspecified site</span></p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType other}\">Required when other conditions coexist or develop subsequently during the treatment</span></p></blockquote><blockquote><p><b>procedure</b></p><p><b>sequence</b>: 1</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType principal}\">The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis</span></p><p><b>date</b>: 2017-05-23</p><p><b>procedure</b>: <span title=\"Codes: {http://www.cms.gov/Medicare/Coding/ICD10 4A023N7}\">4A023N7</span></p></blockquote><blockquote><p><b>procedure</b></p><p><b>sequence</b>: 2</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType other}\">Other procedures performed during the inpatient institutional admission</span></p><p><b>date</b>: 2017-05-23</p><p><b>procedure</b>: <span title=\"Codes: {http://www.cms.gov/Medicare/Coding/ICD10 B211YZZ}\">B211YZZ</span></p></blockquote><blockquote><p><b>procedure</b></p><p><b>sequence</b>: 3</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType other}\">Other procedures performed during the inpatient institutional admission</span></p><p><b>date</b>: 2017-05-23</p><p><b>procedure</b>: <span title=\"Codes: {http://www.cms.gov/Medicare/Coding/ICD10 B215YZZ}\">B215YZZ</span></p></blockquote><h3>Insurances</h3><table class=\"grid\"><tr><td>-</td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>true</td><td><a href=\"Coverage-CoverageEx2.html\">Generated Summary: language: en-US; An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier.: 88800933501; status: active; subscriberId: 888009335; dependent: 01; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/subscriber-relationship self}\">Self</span>; period: 2017-01-01 --&gt; 2017-06-30; network: GI8-HMO DEDUCTIBLE</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0301}\">0301</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 2</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0260}\">0260</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 3</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0305}\">0305</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 4</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0324}\">0324</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 5</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0259}\">0259</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 6</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0250}\">0250</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 7</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0710}\">0710</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 8</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0210}\">0210</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 9</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0272}\">0272</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 10</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0370}\">0370</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 11</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0730}\">0730</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 12</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0450}\">0450</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>item</b></p><p><b>sequence</b>: 13</p><p><b>revenue</b>: <span title=\"Codes: {https://www.nubc.org/CodeSystem/RevenueCodes 0481}\">0481</span></p><p><b>productOrService</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 99231}\">99231</span></p><p><b>serviced</b>: 2017-05-23 --&gt; (ongoing)</p><p><b>location</b>: <span title=\"Codes: {https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set 21}\">HOSPITAL - INPATIENT HOSPITAL</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication submitted}\">The total submitted amount for the claim or group or line item.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication eligible}\">Amount of the change which is considered for adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication deductible}\">Amount deducted from the eligible amount prior to adjudication.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication copay}\">Patient Co-Payment</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication noncovered}\">The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/adjudication benefit}\">Amount payable under the coverage</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication memberliability}\">The amount of the member's liability.</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes: {http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus innetwork}\">In Network</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
 	},
 	"identifier": [{
 		"type": {
@@ -29,6 +29,13 @@
 			"code": "institutional"
 		}],
 		"text": "Institutional"
+	},
+	"subType": {
+		"coding": [{
+			"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType",
+			"code": "inpatient"
+		}],
+		"text": "Inpatient"
 	},
 	"use": "claim",
 	"patient": {
@@ -265,7 +272,7 @@
 		"sequence": 1,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0301"
 			}]
 		},
@@ -284,97 +291,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 386.5,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 2,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0260"
 			}]
 		},
@@ -393,97 +316,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 322.4,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 3,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0305"
 			}]
 		},
@@ -502,97 +341,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 104.2,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 4,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0324"
 			}]
 		},
@@ -611,97 +366,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 171.6,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 5,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0259"
 			}]
 		},
@@ -720,97 +391,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 381.8,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 6,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0250"
 			}]
 		},
@@ -829,97 +416,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 54.2,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 7,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0710"
 			}]
 		},
@@ -938,97 +441,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 642.8,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 8,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0210"
 			}]
 		},
@@ -1047,97 +466,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 1258.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 120.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 1542.01,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 1393.57,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 9,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0272"
 			}]
 		},
@@ -1156,97 +491,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 303.4,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 10,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0370"
 			}]
 		},
@@ -1265,97 +516,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 222.8,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 11,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0730"
 			}]
 		},
@@ -1374,97 +541,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 33.9,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 12,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0450"
 			}]
 		},
@@ -1483,97 +566,13 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
-		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 592.4,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		}
 	},
 	{
 		"sequence": 13,
 		"revenue": {
 			"coding": [{
-				"system": "http://www.nubc.org/RevenueCodes",
+				"system": "https://www.nubc.org/CodeSystem/RevenueCodes",
 				"code": "0481"
 			}]
 		},
@@ -1592,91 +591,21 @@
 				"code": "21"
 			}],
 			"text": "HOSPITAL - INPATIENT HOSPITAL"
+		}
+	}],
+	"adjudication": [{
+		"category": {
+			"coding": [{
+				"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
+				"code": "noncovered",
+				"display": "Noncovered"
+			}],
+			"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 		},
-		"adjudication": [{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "submitted",
-					"display": "Submitted Amount"
-				}],
-				"text": "The total submitted amount for the claim or group or line item."
-			},
-			"amount": {
-				"value": 2673.2,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "copay",
-					"display": "CoPay"
-				}],
-				"text": "Patient Co-Payment"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "eligible",
-					"display": "Eligible Amount"
-				}],
-				"text": "Amount of the change which is considered for adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "deductible",
-					"display": "Deductible"
-				}],
-				"text": "Amount deducted from the eligible amount prior to adjudication."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
-					"code": "benefit",
-					"display": "Benefit Amount"
-				}],
-				"text": "Amount payable under the coverage"
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		},
-		{
-			"category": {
-				"coding": [{
-					"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-					"code": "noncovered",
-					"display": "Noncovered"
-				}],
-				"text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-			},
-			"amount": {
-				"value": 0.0,
-				"currency": "USD"
-			}
-		}]
+		"amount": {
+			"value": 0.0,
+			"currency": "USD"
+		}
 	}],
 	"total": [{
 		"category": {
@@ -1770,6 +699,18 @@
 				"display": "Member liability"
 			}],
 			"text": "The amount of the member's liability."
+		},
+		"amount": {
+			"value": 0.0,
+			"currency": "USD"
+		}
+	},
+	{
+		"category": {
+			"coding": [{
+				"system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+				"code": "innetwork"
+			}]
 		},
 		"amount": {
 			"value": 0.0,
