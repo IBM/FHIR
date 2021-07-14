@@ -1,10 +1,10 @@
 /*
- * (C) Copyright IBM Corp. 2019
+ * (C) Copyright IBM Corp. 2019, 2021
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.ibm.fhir.model.test;
+package com.ibm.fhir.model.visitor.test;
 
 import java.time.LocalDate;
 import java.time.ZoneOffset;

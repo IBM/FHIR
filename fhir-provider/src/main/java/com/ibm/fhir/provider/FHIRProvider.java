@@ -95,7 +95,7 @@ public class FHIRProvider implements MessageBodyReader<Resource>, MessageBodyWri
                         buildResponse(
                                 buildOperationOutcome(Collections.singletonList(
                                         buildOperationOutcomeIssue(IssueSeverity.FATAL, IssueType.INVALID,
-                                                "FHIRProvider: " + encMsg, e.getPath()))),
+                                                "FHIRProvider: " + encMsg, Encode.forHtml(e.getPath())))),
                                 getMediaType(acceptHeader));
                 throw new WebApplicationException(response);
             } else {
@@ -122,11 +122,12 @@ public class FHIRProvider implements MessageBodyReader<Resource>, MessageBodyWri
             // log the error but don't throw because that seems to block to original IOException from bubbling for some reason
             log.log(Level.WARNING, "an error occurred during resource serialization", e);
             if (RuntimeType.SERVER.equals(runtimeType)) {
+                String encMsg = Encode.forHtml(e.getMessage());
                 Response response =
                         buildResponse(
                                 buildOperationOutcome(Collections.singletonList(
                                         buildOperationOutcomeIssue(IssueSeverity.FATAL, IssueType.EXCEPTION,
-                                                "FHIRProvider: " + Encode.forHtml(e.getMessage()), Encode.forHtml(e.getPath())))),
+                                                "FHIRProvider: " + encMsg, Encode.forHtml(e.getPath())))),
                                 mediaType);
                 throw new WebApplicationException(response);
             }

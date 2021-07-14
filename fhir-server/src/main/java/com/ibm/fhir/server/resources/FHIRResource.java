@@ -19,7 +19,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -34,8 +33,6 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.core.UriInfo;
-
-import org.owasp.encoder.Encode;
 
 import com.ibm.fhir.config.FHIRConfigHelper;
 import com.ibm.fhir.config.FHIRConfiguration;
@@ -56,6 +53,8 @@ import com.ibm.fhir.model.type.code.IssueSeverity;
 import com.ibm.fhir.model.type.code.IssueType;
 import com.ibm.fhir.model.util.FHIRUtil;
 import com.ibm.fhir.model.util.ModelSupport;
+import com.ibm.fhir.model.visitor.EncodingVisitor;
+import com.ibm.fhir.model.visitor.EncodingVisitor.EncodingContext;
 import com.ibm.fhir.persistence.FHIRPersistence;
 import com.ibm.fhir.persistence.exception.FHIRPersistenceException;
 import com.ibm.fhir.persistence.helper.FHIRPersistenceHelper;
@@ -308,23 +307,10 @@ public class FHIRResource {
         }
 
         // Single Location to ensure the Operation Outcomes are Encode.forHtml and avoids any injections.
-        Collection<Issue> currentIssues = oo.getIssue();
-        List<Issue> issues = new ArrayList<>();
-        for (Issue current : currentIssues) {
-            if (current.getDiagnostics() != null) {
-                String diagnostics = current.getDiagnostics().getValue();
-                issues.add(
-                    current.toBuilder()
-                       .diagnostics(string(Encode.forHtml(diagnostics)))
-                    .build());
-            } else {
-                issues.add(current);
-            }
-        }
+        EncodingVisitor<OperationOutcome> v = new EncodingVisitor<>(EncodingContext.HTML);
+        oo.accept(v);
         return Response.status(status)
-                .entity(oo.toBuilder()
-                    .issue(issues)
-                    .build())
+                .entity(v.getResult())
                 .build();
     }
 
@@ -457,7 +443,7 @@ public class FHIRResource {
                             .value(Code.of("resource"))
                             .build())
                         .build())
-                .details(CodeableConcept.builder().text(string(Encode.forHtml(msg))).build())
+                .details(CodeableConcept.builder().text(string(msg)).build())
                 .build();
         return new FHIROperationException(msg).withIssue(issue);
     }
