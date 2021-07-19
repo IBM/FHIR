@@ -1,0 +1,1 @@
+This is a cache directory for the database stored with GitHub Actions.

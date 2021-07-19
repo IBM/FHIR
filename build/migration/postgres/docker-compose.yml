@@ -1,0 +1,72 @@
+version: '3.9'
+services:
+  db:
+    image: test/fhir-postgres:snapshot
+    shm_size: 256MB
+    tty: true
+    stdin_open: true
+    hostname: postgres_postgres_1
+    volumes:
+      - type: bind
+        source: ./workarea/volumes/dist/db
+        target: /db
+    # Stop Grace Period - 30 seconds
+    stop_grace_period: 30s
+    sysctls:
+      net.core.somaxconn: 256
+      net.ipv4.tcp_syncookies: 0
+      # To use all of 2 gigabytes
+      kernel.shmmax: 1055092736
+      kernel.shmall: 257591
+    privileged: true
+    command: tail -f /dev/null
+    environment:
+      PG_TRUST_LOCALNET: 'true'
+    healthcheck:
+      start_period: 21s
+      test: ["CMD-SHELL", "pg_isready -d fhirdb -U fhiradmin"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - fhir
+    ports:
+      - 5432:5432
+  fhir:
+    image: ibmcom/ibm-fhir-server:${IMAGE_VERSION}
+    hostname: fhir
+    env_file:
+      - ./.fhir.env
+    volumes:
+      - type: bind
+        source: ./workarea/volumes/dist/config
+        target: /opt/ol/wlp/usr/servers/defaultServer/config
+        read_only: true
+      - type: bind
+        source: ./workarea/volumes/dist/overrides
+        target: /opt/ol/wlp/usr/servers/defaultServer/configDropins/overrides
+        read_only: true
+      - type: bind
+        source: ./workarea/volumes/dist/userlib/
+        target: /opt/ol/wlp/usr/servers/defaultServer/userlib
+        read_only: true
+      - type: bind
+        source: ./workarea/volumes/dist/derby
+        target: /output/derby
+        read_only: false
+    healthcheck:
+      start_period: 32s
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      test: curl -k -u 'fhiruser:change-password' 'https://localhost:9443/fhir-server/api/v4/$$healthcheck'
+    ports:
+      - 9443:9443
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - fhir
+networks:
+  fhir:
+    driver: bridge

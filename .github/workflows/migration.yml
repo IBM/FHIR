@@ -1,4 +1,6 @@
-name: Database Migration
+name: Datastore Migration
+
+# For details on this workflow, refer to build/migration/README.md
 
 on:
   pull_request:
@@ -8,65 +10,140 @@ on:
       - '.github/workflows/site.yml'
 
 jobs:
-  db2-migration:
+  migration:
     runs-on: ubuntu-latest
     if: "!contains(github.event.pull_request.labels.*.name, 'ci-skip')"
     strategy:
       matrix:
-        java: [ 'openjdk8' ]
+        datastore: [ 'db2', 'postgres' ]
+        release: ['previous', 'last']
       fail-fast: false
     steps:
-    - uses: actions/checkout@v2.3.3
-    - name: Set up OpenJDK
-      uses: joschi/setup-jdk@v2.3.0
-      with:
-        java-version: ${{ matrix.java }}
-    - name: Build samples
-      run: mvn -B install --file fhir-examples --no-transfer-progress -Dmaven.wagon.http.retryHandler.count=3
-    - name: Build parent without tests
-      run: |
-        mvn -B org.apache.maven.plugins:maven-dependency-plugin:3.1.2:go-offline -f fhir-parent -DexcludeReactor=true -Dmaven.wagon.http.retryHandler.count=3
-        mvn -B org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins -f fhir-parent -DexcludeReactor=true -Dmaven.wagon.http.retryHandler.count=3
-        mvn -B install --file fhir-parent -DskipTests -P include-fhir-igs,integration --no-transfer-progress -Dmaven.wagon.http.retryHandler.count=3
-        mvn -B dockerfile:build -f fhir-install --no-transfer-progress -Dmaven.wagon.http.retryHandler.count=3
-    - name: free disk space
-      run: |
-        # create and remove a 200 MB file to make sure we have the room needed later
-        dd if=/dev/urandom oflag=direct of=balloon.dat bs=1024k count=200
-        rm -f balloon.dat
-        sudo apt clean
-        docker system prune -f
-        df -h
-    - name: Server Integration Tests
-      run: |
-        export WORKSPACE=${GITHUB_WORKSPACE}
-        build/db2-migration-test-docker.sh
-        mvn -B test -DskipTests=false -f fhir-server-test --no-transfer-progress -Dmaven.wagon.http.retryHandler.count=3
-        build/post-integration-test-docker.sh
-    - name: Gather error logs
-      if: failure()
-      run: |
-        it_results=integration-test-results
-        rm -fr ${it_results} 2>/dev/null
-        mkdir -p ${it_results}/server-logs
-        mkdir -p ${it_results}/fhir-server-test
-        containerId=$(docker ps -a | grep fhir | cut -d ' ' -f 1)
-        if [[ -z "${containerId}" ]]; then
-            echo "Warning: Could not find fhir container!!!"
-        else
-            echo "fhir container id: $containerId"
+      - name: Checkout source code for main
+        uses: actions/checkout@v2.3.4
+        with:
+          path: fhir/
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Fetch the right branch
+        env:
+          BASE: ${{ github['base_ref'] }}
+        run: |
+          cd fhir/
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/${BASE}:refs/remotes/origin/${BASE}
 
-            # Grab the container's console log
-            docker logs $containerId  >& ${it_results}/docker-console.txt
+      - name: Setup java
+        uses: joschi/setup-jdk@v2.3.0
+        with:
+          java-version: 11
 
-            echo "Gathering post-test server logs from docker container: $containerId"
-            docker cp -L $containerId:/logs ${it_results}/server-logs
-        fi
-        echo "Gathering integration test output"
-        cp -pr ${GITHUB_WORKSPACE}/fhir-server-test/target/surefire-reports/* ${it_results}/fhir-server-test || true
-    - name: Upload logs
-      if: always()
-      uses: actions/upload-artifact@v2.2.0
-      with:
-        name: db2-migration-test-results-${{ matrix.java }}
-        path: integration-test-results
+      - name: Gather the environment details
+        if: always()
+        run: |
+          bash fhir/build/common/gather-environment-details.sh
+
+      - name: Determine parameters for environment variables
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: bash fhir/build/migration/bin/0_determine.sh ${{matrix.release}}
+
+      - name: Restore the cache for the previous version
+        if: "!contains(env.migration_skip, 'true')"
+        uses: actions/cache@v2
+        env:
+          cache-name: migration-db-${{ matrix.datastore }}-${{ env.migration_branch }}
+        with:
+            path: ~/fhir/build/migration/.cache
+            key: ${{ env.cache-name }}-${{ hashFiles('db.tgz') }}
+            restore-keys: |
+              ${{ env.cache-name }}-${{ hashFiles('db.tgz') }}
+
+      - name: Checks if the cache actually exists
+        if: "contains(env.migration_skip, 'false')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/1_check-cache.sh ${{matrix.datastore}}
+
+      - name: Checkout source code for previous
+        if: "contains(env.migration_cache, 'false')"
+        uses: actions/checkout@v2.3.4
+        with:
+          path: prev/
+          ref: ${{ env.migration_branch }}
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup previous release environment
+        if: "contains(env.migration_cache, 'false')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/1_previous-setup.sh ${{matrix.datastore}}
+
+      - name: Setup docker-compose and database
+        if: "contains(env.migration_cache, 'false')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/2_compose.sh ${{matrix.datastore}} ${{ env.migration_branch }}
+
+      - name: Run previous release's Integration Tests
+        if: "contains(env.migration_cache, 'false')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/2_previous-integration-test.sh ${{matrix.datastore}}
+          bash fhir/build/migration/bin/3_previous-teardown.sh ${{matrix.datastore}}
+      
+      - name: Setup previous release's cached database
+        if: "contains(env.migration_cache, 'true')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/3_previous-cache-startup.sh ${{matrix.datastore}}
+
+      - name: Migrate to the current release 
+        if: "!contains(env.migration_skip, 'true')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/4_current-migrate.sh ${{matrix.datastore}}
+
+      - name: Run LATEST Integration Tests
+        if: "!contains(env.migration_skip, 'true')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/5_current-pre-integration-test.sh ${{matrix.datastore}} ${{ env.migration_branch }}
+          bash fhir/build/migration/bin/6_current-reindex.sh ${{matrix.datastore}}
+          bash fhir/build/migration/bin/7_current-integration-test.sh ${{matrix.datastore}}
+
+      - name: Teardown and cleanup
+        if: "!contains(env.migration_skip, 'true')"
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          bash fhir/build/migration/bin/8_teardown.sh ${{matrix.datastore}}
+
+      - name: Cache the Database
+        if: "contains(env.migration_cache, 'false') && contains(env.migration_skip, 'false')"
+        uses: actions/cache@v2
+        with:
+          key: migration-db-${{ matrix.datastore }}-${{ env.migration_branch }}
+          path: | 
+            ~/fhir/build/migration/.cache/db.tgz
+
+      - name: Gather error logs
+        if: failure()
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: bash fhir/build/common/gather-logs.sh migration ${{matrix.datastore}}
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v2.2.0
+        with:
+          name: integration-test-results-${{ matrix.datastore }}-${{ matrix.release }}
+          path: fhir/build/migration/integration-test-results
