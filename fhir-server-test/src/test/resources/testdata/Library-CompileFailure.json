@@ -1,0 +1,22 @@
+{
+    "resourceType": "Library",
+    "id": "CompileFailure",
+    "version": "1.0.0",
+    "name": "CompileFailure",
+    "url": "http://ibm.com/fhir/Library/Compile-Failure",
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/library-type",
+                "code": "logic-library"
+            }
+        ]
+    },
+    "content": [
+        {
+            "contentType": "text/cql",
+            "data": "bGlicmFyeSAiSW5saW5lTGlicmFyeSIgdmVyc2lvbiAnMS4wLjAnCnVzaW5nICJGSElSIiB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSAiRkhJUkhlbHBlcnMiIHZlcnNpb24gJzQuMC4xJwpjb250ZXh0IFBhdGllbnQKZGVmaW5lIElubGluZUV4cHJlc3Npb246CglbTm90QVJlc291cmNlXQo="
+        }
+    ]
+}

@@ -38,6 +38,8 @@
       path: /guides/FHIRBulkOperations
     - title: Operation Framework
       path: /guides/FHIROperationFramework
+    - title: Clinical Reasoning Guide
+      path: /guides/FHIRClinicalReasoningGuide
 - title: Tips and Tricks
   pages:
     - path: /TipsAndTricks

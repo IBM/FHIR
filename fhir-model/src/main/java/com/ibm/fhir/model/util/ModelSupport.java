@@ -221,6 +221,7 @@ public final class ModelSupport {
         "years",
         "second"
     ));
+    private static final Map<String, Class<?>> CODE_SUBTYPE_MAP = buildCodeSubtypeMap();
 
     private ModelSupport() { }
 
@@ -329,6 +330,20 @@ public final class ModelSupport {
 
         public Set<String> getChoiceElementNames() {
             return choiceElementNames;
+        }
+    }
+
+    private static Map<String, Class<?>> buildCodeSubtypeMap() {
+        try (InputStream in = ModelSupport.class.getClassLoader().getResourceAsStream("codeSubtypeClasses")) {
+            Map<String, Class<?>> codeSubtypeMap = new LinkedHashMap<>();
+            List<String> lines = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8)).lines().collect(Collectors.toList());
+            for (String className : lines) {
+                Class<?> codeSubtypeClass = Class.forName(className);
+                codeSubtypeMap.put(codeSubtypeClass.getSimpleName(), codeSubtypeClass);
+            }
+            return Collections.unmodifiableMap(codeSubtypeMap);
+        } catch (Exception e) {
+            throw new Error(e);
         }
     }
 
@@ -1001,5 +1016,13 @@ public final class ModelSupport {
      */
     public static Class<?> getDataType(String typeName) {
         return DATA_TYPE_MAP.get(typeName);
+    }
+
+    public static boolean isCodeSubtype(String name) {
+        return CODE_SUBTYPE_MAP.containsKey(name);
+    }
+
+    public static Collection<Class<?>> getCodeSubtypes() {
+        return CODE_SUBTYPE_MAP.values();
     }
 }

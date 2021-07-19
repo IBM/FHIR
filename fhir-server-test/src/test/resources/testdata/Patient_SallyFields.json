@@ -1,0 +1,10 @@
+{
+    "resourceType" : "Patient",
+    "id" : "sally-fields",
+    "active" : true,
+    "name" : [ {
+        "family" : "Fields",
+        "given" : [ "Sally" ]
+    } ],
+    "gender" : "female"
+}

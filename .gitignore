@@ -2,6 +2,7 @@
 .project
 .settings/
 .classpath
+ibm-web-ext.xml
 
 ## Annotation processing
 .apt_generated/

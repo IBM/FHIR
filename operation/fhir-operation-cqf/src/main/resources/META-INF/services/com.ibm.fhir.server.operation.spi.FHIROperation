@@ -1,0 +1,6 @@
+com.ibm.fhir.operation.cqf.EvaluateMeasureOperation
+com.ibm.fhir.operation.cqf.CareGapsOperation
+com.ibm.fhir.operation.cqf.LibraryDataRequirementsOperation
+com.ibm.fhir.operation.cqf.MeasureDataRequirementsOperation
+com.ibm.fhir.operation.cqf.MeasureSubmitDataOperation
+com.ibm.fhir.operation.cqf.MeasureCollectDataOperation

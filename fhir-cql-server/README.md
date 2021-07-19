@@ -1,0 +1,3 @@
+#fhir-cql-server
+
+This module provides an implementation of the open source CQL engine backend that runs directly on top of the the IBM FHIR Server persistence and terminology subsystems, bypassing the REST layer entirely. This backend could be used by in-server clients wishing to use the IBM FHIR Server itself as the processing engine for CQL evaluation or external clients wishing to reduce the extra processing required by the REST layer. In-server processing has the benefit of reducing data transfers that are necessary to perform the evaluation logic at the cost of using a FHIR server's resources for other operations such as routine data access.

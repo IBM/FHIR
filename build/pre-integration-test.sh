@@ -72,10 +72,11 @@ mkdir -p ${SIT}/wlp/usr/servers/fhir-server/configDropins/overrides
 cp -p ${WORKSPACE}/fhir-server/liberty-config/configDropins/disabled/datasource-derby.xml ${SIT}/wlp/usr/servers/fhir-server/configDropins/overrides/datasource.xml
 
 echo "Copying test artifacts to install location..."
-rm -rf ${SIT}/wlp/usr/servers/fhir-server/userlib/fhir-operation-*-tests.jar
-cp -pr ${WORKSPACE}/operation/fhir-operation-test/target/fhir-operation-*-tests.jar ${SIT}/wlp/usr/servers/fhir-server/userlib/
-cp -pr ${WORKSPACE}/operation/fhir-operation-term-cache/target/fhir-operation-*.jar ${SIT}/wlp/usr/servers/fhir-server/userlib/
-find ${WORKSPACE}/conformance -iname 'fhir-ig*.jar' -not -iname 'fhir*-tests.jar' -not -iname 'fhir*-test-*.jar' -exec cp -f {} ${SIT}/wlp/usr/servers/fhir-server/userlib/ \;
+USERLIB=${SIT}/wlp/usr/servers/fhir-server/userlib
+rm -rf ${USERLIB}/fhir-operation-*-tests.jar
+cp -pr ${WORKSPACE}/operation/fhir-operation-test/target/fhir-operation-*-tests.jar ${USERLIB}/
+cp -pr ${WORKSPACE}/operation/fhir-operation-term-cache/target/fhir-operation-*.jar ${USERLIB}/
+find ${WORKSPACE}/conformance -iname 'fhir-ig*.jar' -not -iname 'fhir*-tests.jar' -not -iname 'fhir*-test-*.jar' -exec cp -f {} ${USERLIB} \;
 
 # Start up the fhir server
 echo "

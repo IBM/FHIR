@@ -1,0 +1,3 @@
+# fhir-quality-measures
+
+This module provides an implementation of the logic needed to calculate FHIR clinical quality measures. Much of the core code is borrowed from the [cql-evaluator](https://github.com/DBCG/cql-evaluator) open source project where work is also underway to integrate these changes ([1](https://github.com/DBCG/cql-evaluator/pull/48),[2](https://github.com/DBCG/cql-evaluator/pull/44)).
