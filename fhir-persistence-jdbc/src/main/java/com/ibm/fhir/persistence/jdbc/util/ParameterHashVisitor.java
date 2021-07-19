@@ -47,10 +47,25 @@ public class ParameterHashVisitor implements ExtractedParameterValueVisitor {
      * Public constructor.
      */
     public ParameterHashVisitor() {
+        this(false);
+    }
+
+    /**
+     * Public constructor.
+     * @param legacyWholeSystemSearchParamsEnabled if true, then update digest to ensure hash changes
+     * from when it is false; this can be removed when the legacyWholeSystemSearchParamsEnabled config
+     * setting is removed.
+     */
+    public ParameterHashVisitor(boolean legacyWholeSystemSearchParamsEnabled) {
         try {
             digest = MessageDigest.getInstance(SHA_256);
             // Start digest with latest FHIR schema version (with parameter storage update)
             digest.update(FhirSchemaVersion.getLatestParameterStorageUpdate().toString().getBytes(StandardCharsets.UTF_8));
+            // If legacyWholeSystemSearchParamsEnabled is true, then update digest to ensure hash changes from when
+            // it is false; this can be removed when the legacyWholeSystemSearchParamsEnabled config setting is removed
+            if (legacyWholeSystemSearchParamsEnabled) {
+                updateDigestWithString("legacyWholeSystemSearchParamsEnabled");
+            }
         } catch (NoSuchAlgorithmException e) {
             throw new IllegalStateException("MessageDigest not found: " + SHA_256, e);
         }
